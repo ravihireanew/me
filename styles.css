@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    scroll-behavior: smooth;
+    background: #e9f5fb; /* Light background color for a clean look */
+}
+
+header {
+    background: linear-gradient(to right, #007bff, #5bc0de); /* Blue gradient for a modern look */
+    color: #fff;
+    padding: 60px 0; /* Increased padding for a more spacious header */
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #fff; /* White border around the profile image */
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+nav {
+    background: #004085; /* Dark blue for the navigation bar */
+    text-align: center;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff; /* White bars for the mobile menu */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px; /* More space between navigation items */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #5bc0de; /* Light blue for hover effect */
+    color: #333; /* Dark text color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Wider container for larger screens */
+    margin: auto;
+    overflow: hidden;
+}
+
+section {
+    padding: 40px 0;
+}
+
+h2 {
+    color: #007bff; /* Blue color for headings */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: #007bff; /* Blue underline for headings */
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.project, .experience {
+    background: #fff; /* White background for cards */
+    padding: 25px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover, .experience:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+footer {
+    background: #004085; /* Dark blue for footer */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+a {
+    color: #007bff; /* Standard blue link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Social Icons */
+.social-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #007bff; /* Blue color for social icons */
+    font-size: 2em; /* Larger icons */
+    margin: 0 15px; /* Space between icons */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+        background-color: #004085; /* Dark blue background for mobile */
+        flex-direction: column;
+    }
+
+    nav ul.show {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space for mobile */
+    }
+
+    header, section, footer {
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 120px; /* Smaller profile image for mobile */
+        height: 120px;
+    }
+}
